@@ -32,11 +32,11 @@ user_age = input("How old are you? ")
 user_age_int = int(user_age)
 
 # Calculate if user can acces our platform
-user_age_minus = user_age_int - 18
+user_age_minus = abs(user_age_int - 18)
 
 # Check if the user is above 18 year if not exit
 if user_age_int < 18:
-	print("You are not old enough to use my platform. Come back in " + str(abs(user_age_minus)) + " years")
+	print("You are not old enough to use my platform. Come back in " + str(int(user_age_minus)) + " years")
 	exit()
 	
 # Asking user if he/she wants advertisement
